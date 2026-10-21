@@ -1,9 +1,9 @@
 # 太空生存戰
 import pygame
-import random 
+import random
 import os
 
-FPS = 60 
+FPS = 60
 WIDTH = 500
 HEIGHT = 600
 
@@ -17,7 +17,7 @@ YELLOW = (255, 255, 0)
 pygame.init()
 pygame.mixer.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("第一個遊戲")
+pygame.display.set_caption("太空生存戰")
 clock = pygame.time.Clock()
 
 # 載入圖片
@@ -177,7 +177,7 @@ class Player(pygame.sprite.Sprite):
 class Rock(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image_ori = random.choice(rock_imgs) 
+        self.image_ori = random.choice(rock_imgs)
         self.image_ori.set_colorkey(BLACK)
         self.image = self.image_ori.copy()
         self.rect = self.image.get_rect()
@@ -283,7 +283,7 @@ while running:
         for i in range(8):
             new_rock()
         score = 0
-    
+
     clock.tick(FPS)
     # 取得輸入
     for event in pygame.event.get():
@@ -322,7 +322,7 @@ while running:
             player.lives -= 1
             player.health = 100
             player.hide()
-            
+
     # 判斷寶物 飛船相撞
     hits = pygame.sprite.spritecollide(player, powers, True)
     for hit in hits:
