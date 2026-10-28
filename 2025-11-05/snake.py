@@ -11,17 +11,17 @@ greyColor = pygame.Color(150, 150, 150)
 
 WIDTH = 160    # 遊戲畫面寬
 HEIGHT = 100   # 遊戲畫面高
-SCALE = 5    # 放大比例 
+SCALE = 5    # 放大比例
 
 screen = pygame.display.set_mode( ( WIDTH*SCALE, HEIGHT*SCALE ) )  # 設定遊戲視窗的尺寸(size)
 
 pygame.display.set_caption('我的貪食蛇遊戲') # 遊戲視窗的抬頭
 
-screen.fill(blackColor)   # 塗黑全部背景
+# screen.fill(blackColor)   # 塗黑全部背景
 
 
 # 設定一開始蛇頭的x,y座標
-# head_x = WIDTH / 2  
+# head_x = WIDTH / 2
 # head_y = HEIGHT /2
 # body = [ (head_x, head_y) ]  # 預設身體裡只有一個「頭」
 # direction = '右'  # 預設一開始蛇是往右走
@@ -51,7 +51,7 @@ while running:
     #     direction = "下"
 
   #--事件(event)檢查_End-----------
-  
+
 
   # 清空、重繪pygame顯示層
   # screen.fill(blackColor)   # 塗黑全部背景
