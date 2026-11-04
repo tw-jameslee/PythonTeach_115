@@ -197,6 +197,6 @@ while True:
   # 顯示分數
   draw_score()
   # 更新畫面顯示
-  pygame.display.flip()    
+  pygame.display.update()    
   # 控制遊戲速度為每秒FPS幀
   clock.tick(FPS) 
