@@ -1,5 +1,6 @@
 import pygame
 import sys
+from dataclasses import dataclass
 
 
 #常數宣告
@@ -7,6 +8,11 @@ WIDTH = 32      # 0~31 共32格
 HEIGHT = 24     # 0~23 共24格
 CELL_SIZE = 20  # 每格大小: 20像素
 
+# 變數/類別宣告
+@dataclass
+class Point:    # 表示座標上的一個點(有x屬性、y屬性，資料型態都是整數)
+    x: int
+    y: int
 
 # 遊戲初始化
 pygame.init()
