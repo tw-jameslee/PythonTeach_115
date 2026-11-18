@@ -7,7 +7,7 @@ from dataclasses import dataclass
 # 遊戲常數設定
 WIDTH = 32      # 0~31 共32格
 HEIGHT = 24     # 0~23 共24格
-CELL_SIZE = 30  # 每格大小: 20像素
+CELL_SIZE = 20  # 每格大小: 20像素
 FPS = 7         # 遊戲更新頻率(每秒幀數)
 
 # 顏色定義(RGB)
@@ -118,7 +118,7 @@ def game_over():
     music.die_sound.play()  # 播放遊戲結束音效
     # 顯示遊戲結束訊息
     font = pygame.font.SysFont('microsoftjhenghei', int(CELL_SIZE*1.8))  # 使用系統字型，字型大小1.8倍CELL_SIZE
-    txtSurf = font.render(f"遊戲結束！你的得分是: {score} 分", True, (0, 100, 0))  # 綠色文字
+    txtSurf = font.render(f"遊戲結束！", True, (0, 100, 0))  # 綠色文字
     txtRect = txtSurf.get_rect()  # 取得文字矩形物件
     txtRect.midbottom  = (screen.get_width()//2 , screen.get_height()//2)  # 置中位置
     screen.blit(txtSurf, txtRect) # 繪製在置中位置
